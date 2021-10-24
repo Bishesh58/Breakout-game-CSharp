@@ -39,25 +39,32 @@
             this.grpBoxWinner = new System.Windows.Forms.GroupBox();
             this.lblWinner2 = new System.Windows.Forms.Label();
             this.lblWinner1 = new System.Windows.Forms.Label();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRestart = new System.Windows.Forms.Button();
+            this.btnQuit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picLife2 = new System.Windows.Forms.PictureBox();
+            this.picLife1 = new System.Windows.Forms.PictureBox();
+            this.picLife3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picPaddle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBg)).BeginInit();
             this.grpBoxWinner.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLife2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLife1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLife3)).BeginInit();
             this.SuspendLayout();
             // 
             // lblScore
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.BackColor = System.Drawing.Color.Transparent;
-            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.ForeColor = System.Drawing.Color.Yellow;
             this.lblScore.Location = new System.Drawing.Point(13, 728);
             this.lblScore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(70, 25);
+            this.lblScore.Size = new System.Drawing.Size(95, 27);
             this.lblScore.TabIndex = 3;
             this.lblScore.Text = "Score:";
             // 
@@ -77,7 +84,7 @@
             // 
             this.picBall.BackColor = System.Drawing.Color.Transparent;
             this.picBall.Image = ((System.Drawing.Image)(resources.GetObject("picBall.Image")));
-            this.picBall.Location = new System.Drawing.Point(641, 594);
+            this.picBall.Location = new System.Drawing.Point(635, 635);
             this.picBall.Margin = new System.Windows.Forms.Padding(4);
             this.picBall.Name = "picBall";
             this.picBall.Size = new System.Drawing.Size(24, 24);
@@ -108,7 +115,7 @@
             this.lbHighScore.BackColor = System.Drawing.Color.Transparent;
             this.lbHighScore.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHighScore.ForeColor = System.Drawing.Color.Yellow;
-            this.lbHighScore.Location = new System.Drawing.Point(1144, 728);
+            this.lbHighScore.Location = new System.Drawing.Point(1046, 697);
             this.lbHighScore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbHighScore.Name = "lbHighScore";
             this.lbHighScore.Size = new System.Drawing.Size(0, 27);
@@ -118,11 +125,11 @@
             // 
             this.grpBoxWinner.Controls.Add(this.lblWinner2);
             this.grpBoxWinner.Controls.Add(this.lblWinner1);
-            this.grpBoxWinner.Controls.Add(this.btnStart);
-            this.grpBoxWinner.Controls.Add(this.button1);
+            this.grpBoxWinner.Controls.Add(this.btnRestart);
+            this.grpBoxWinner.Controls.Add(this.btnQuit);
             this.grpBoxWinner.Controls.Add(this.pictureBox1);
             this.grpBoxWinner.Enabled = false;
-            this.grpBoxWinner.Location = new System.Drawing.Point(542, 168);
+            this.grpBoxWinner.Location = new System.Drawing.Point(481, 168);
             this.grpBoxWinner.Name = "grpBoxWinner";
             this.grpBoxWinner.Size = new System.Drawing.Size(351, 291);
             this.grpBoxWinner.TabIndex = 6;
@@ -155,45 +162,47 @@
             this.lblWinner1.TabIndex = 12;
             this.lblWinner1.Text = "Winner Winner ";
             // 
-            // btnStart
+            // btnRestart
             // 
-            this.btnStart.BackColor = System.Drawing.Color.Transparent;
-            this.btnStart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnStart.BackgroundImage")));
-            this.btnStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStart.FlatAppearance.BorderSize = 0;
-            this.btnStart.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnStart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStart.Font = new System.Drawing.Font("Ravie", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.ForeColor = System.Drawing.Color.White;
-            this.btnStart.Location = new System.Drawing.Point(55, 188);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(4);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(105, 46);
-            this.btnStart.TabIndex = 14;
-            this.btnStart.Text = "restart";
-            this.btnStart.UseVisualStyleBackColor = false;
+            this.btnRestart.BackColor = System.Drawing.Color.Transparent;
+            this.btnRestart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRestart.BackgroundImage")));
+            this.btnRestart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRestart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRestart.FlatAppearance.BorderSize = 0;
+            this.btnRestart.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnRestart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRestart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestart.Font = new System.Drawing.Font("Ravie", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestart.ForeColor = System.Drawing.Color.White;
+            this.btnRestart.Location = new System.Drawing.Point(55, 188);
+            this.btnRestart.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRestart.Name = "btnRestart";
+            this.btnRestart.Size = new System.Drawing.Size(105, 46);
+            this.btnRestart.TabIndex = 14;
+            this.btnRestart.Text = "restart";
+            this.btnRestart.UseVisualStyleBackColor = false;
+            this.btnRestart.Click += new System.EventHandler(this.btnStart_Click);
             // 
-            // button1
+            // btnQuit
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Ravie", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(192, 188);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 46);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Quit";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnQuit.BackColor = System.Drawing.Color.Transparent;
+            this.btnQuit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnQuit.BackgroundImage")));
+            this.btnQuit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnQuit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQuit.FlatAppearance.BorderSize = 0;
+            this.btnQuit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnQuit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnQuit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuit.Font = new System.Drawing.Font("Ravie", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuit.ForeColor = System.Drawing.Color.White;
+            this.btnQuit.Location = new System.Drawing.Point(192, 188);
+            this.btnQuit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(105, 46);
+            this.btnQuit.TabIndex = 15;
+            this.btnQuit.Text = "Quit";
+            this.btnQuit.UseVisualStyleBackColor = false;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // pictureBox1
             // 
@@ -206,6 +215,39 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // picLife2
+            // 
+            this.picLife2.BackColor = System.Drawing.Color.Transparent;
+            this.picLife2.Image = ((System.Drawing.Image)(resources.GetObject("picLife2.Image")));
+            this.picLife2.Location = new System.Drawing.Point(1241, 697);
+            this.picLife2.Name = "picLife2";
+            this.picLife2.Size = new System.Drawing.Size(23, 28);
+            this.picLife2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLife2.TabIndex = 9;
+            this.picLife2.TabStop = false;
+            // 
+            // picLife1
+            // 
+            this.picLife1.BackColor = System.Drawing.Color.Transparent;
+            this.picLife1.Image = ((System.Drawing.Image)(resources.GetObject("picLife1.Image")));
+            this.picLife1.Location = new System.Drawing.Point(1212, 697);
+            this.picLife1.Name = "picLife1";
+            this.picLife1.Size = new System.Drawing.Size(23, 28);
+            this.picLife1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLife1.TabIndex = 10;
+            this.picLife1.TabStop = false;
+            // 
+            // picLife3
+            // 
+            this.picLife3.BackColor = System.Drawing.Color.Transparent;
+            this.picLife3.Image = ((System.Drawing.Image)(resources.GetObject("picLife3.Image")));
+            this.picLife3.Location = new System.Drawing.Point(1270, 697);
+            this.picLife3.Name = "picLife3";
+            this.picLife3.Size = new System.Drawing.Size(23, 28);
+            this.picLife3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLife3.TabIndex = 11;
+            this.picLife3.TabStop = false;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -214,6 +256,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1301, 766);
+            this.Controls.Add(this.picLife3);
+            this.Controls.Add(this.picLife1);
+            this.Controls.Add(this.picLife2);
             this.Controls.Add(this.grpBoxWinner);
             this.Controls.Add(this.lbHighScore);
             this.Controls.Add(this.lblScore);
@@ -232,6 +277,9 @@
             this.grpBoxWinner.ResumeLayout(false);
             this.grpBoxWinner.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLife2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLife1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLife3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,9 +295,12 @@
         private System.Windows.Forms.GroupBox grpBoxWinner;
         private System.Windows.Forms.Label lblWinner2;
         private System.Windows.Forms.Label lblWinner1;
-        private System.Windows.Forms.Button btnStart;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRestart;
+        private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picLife2;
+        private System.Windows.Forms.PictureBox picLife1;
+        private System.Windows.Forms.PictureBox picLife3;
     }
 }
 

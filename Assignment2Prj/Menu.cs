@@ -23,5 +23,10 @@ namespace Assignment2Prj
             f1.Show();
             this.Hide();
         }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

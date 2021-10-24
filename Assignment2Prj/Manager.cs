@@ -51,12 +51,11 @@ namespace Assignment2Prj
 
         public void gameOver(int score, Timer timer, GroupBox gBox)
         {
-            if(score == 10)
+            if(score == 100)
             {
                 timer.Stop();
                 gBox.Enabled = true;
                 gBox.Visible = true;
-
             }
         }
     }

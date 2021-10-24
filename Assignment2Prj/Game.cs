@@ -58,9 +58,11 @@ namespace Assignment2Prj
             
         }
 
+
         private void timer_Tick(object sender, EventArgs e)
         {
-            ball.moveBall(this, paddle.picPaddle);
+            ball.moveBall(this, paddle.picPaddle, picLife1, picLife2, 
+                picLife3, grpBoxWinner, timer, lblWinner1, lblWinner2);
             paddle.movePaddle();
             lblScore.Text = "Score: " + ball.score.ToString();
             manager.showHighScore(lbHighScore, ball.score);
@@ -79,6 +81,17 @@ namespace Assignment2Prj
                 paddle.moveRight(this);
             }
         }
-        
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            Game f1 = new Game();
+            f1.Show();
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
