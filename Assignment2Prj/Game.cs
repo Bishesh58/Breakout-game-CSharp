@@ -64,8 +64,7 @@ namespace Assignment2Prj
             paddle.movePaddle();
             lblScore.Text = "Score: " + ball.score.ToString();
             manager.showHighScore(lbHighScore, ball.score);
-            manager.gameOver(ball.score, timer);
-            
+            manager.gameOver(ball.score, timer, grpBoxWinner);
            
         }
 
